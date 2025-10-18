@@ -398,6 +398,7 @@ const render = () => {
         <p>ID: ${procesoEnEjecucion.id}</p>
         <p>Operacion: ${procesoEnEjecucion.op}</p>
         <p>Trans: ${procesoEnEjecucion.tiempoTrans}</p>
+        <p>Quantum: ${procesoEnEjecucion.quantumTrans}</p>
         <p>Restante: ${procesoEnEjecucion.tiempoMax - procesoEnEjecucion.tiempoTrans}</p>
     `;
     } else if ((procesosEnMemoria > 0 && listos.length === 0 && bloqueados.length === procesosEnMemoria) || (procesosEnMemoria <= 0)) {
