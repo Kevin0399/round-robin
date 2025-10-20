@@ -138,6 +138,7 @@ const tick = () => {
             procesoEnEjecucion._nuevoEnCPU = false; // No incrementar en primer tick
         } else {
             procesoEnEjecucion.tiempoTrans++;
+console.log({procesoEnejecución.tiempoTrans});
             procesoEnEjecucion.servicio++;
             procesoEnEjecucion.quantumTrans++;
         }
