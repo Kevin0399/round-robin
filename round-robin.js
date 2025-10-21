@@ -156,7 +156,7 @@ const tick = () => {
     }
 
     // Si se cumple el periodo del quantum 
-    if (procesoEnEjecucion && procesoEnEjecucion.quantumTrans >= quantum + 1 && listos.length > 0) {
+    if (procesoEnEjecucion && procesoEnEjecucion.quantumTrans >= quantum && listos.length > 0) {
         console.log("QUANTUM");
         procesoEnEjecucion.estado = "Listo";
         quantumCumplido = true; // Indicamos que se ha cumplido el quantum
