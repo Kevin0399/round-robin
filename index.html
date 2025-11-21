@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulación - RR</title>
+    <title>Simulación - Paginación</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="contenedorPrincipal">
-        <h1>Simulación - Algoritmo Round Robin</h1>
+        <h1>Simulación - Paginación Simple</h1>
 
 
         <!-- ================= Fase Inicial ================= -->
@@ -36,6 +36,7 @@
             <div class="contProcesos" id="reloj">Reloj: 0</div>
             <div class="contProcesos">Nuevos: <span id="nuevos">0</span></div>
             <div class="contProcesos">Quantum:  <span id="tiempoQuantum">0</span></div>
+            <div class="contProcesos"><span id="proceso-a-listos"></span></div>
 
 
             <div class="contenedorEstados">
@@ -64,11 +65,34 @@
             </div>
 
             <div id="btnVerResultados"></div>
+            
+            <p><b>Teclas:</b> E = Bloquear, W = Error, P = Pausar, C = Continuar, N = Nuevo Proceso, B = BCP, T = Tabla de Páginas</p>
 
-            <p><b>Teclas:</b> E = Bloquear, W = Error, P = Pausar, C = Continuar, N = Nuevo Proceso, B = BCP</p>
+            <!-- Contenedor de Memoria -->
+            <div id="memoriaWrapper" style="margin-top:1em;">
+                <h2>Memoria</h2>
+
+                <!-- Leyenda de colores -->
+                <div id="memoriaLegend"></div>
+
+                <div id="memoriaContainer"></div>
+
+            </div>
+
         </div>
 
-        <!-- ====================== Mostar BCP ====================== -->
+        <!-- ====================== Mostar Tabla de Paginas ====================== -->
+        <div id="pantallaTabla" style="display:none;">
+            <div class="contProcesos" id="relojBCP">Reloj: 0</div>
+            <div class="tablaPgDiv">
+                <h2>Tabla de Páginas</h2>
+                <table id="tablaPg"></table>
+                <h2>Marcos Libres</h2>
+                <table id="tablaPgLibres"></table>
+            </div>
+        </div>
+
+        <!-- ====================== Mostar BCP====================== -->
         <div id="pantallaBcp" style="display:none;">
             <div class="contProcesos" id="relojBCP">Reloj: 0</div>
             <div class="tablaEsperaDiv">
@@ -83,7 +107,7 @@
             <table id="tablaResultados"></table>
         </div>
     </div>
-    <script src="round-robin.js"></script>
+    <script src="paginacion.js"></script>
 </body>
 
 </html>
